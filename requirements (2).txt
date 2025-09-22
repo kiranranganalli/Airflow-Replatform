@@ -1,0 +1,4 @@
+
+# Minimal local requirements for tests and lint only.
+pytest>=8.0.0
+flake8>=7.0.0

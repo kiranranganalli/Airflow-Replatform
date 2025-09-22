@@ -1,0 +1,42 @@
+{
+  "name": "orders",
+  "primary_key": [
+    "order_id"
+  ],
+  "columns": [
+    {
+      "name": "order_id",
+      "type": "STRING",
+      "nullable": false
+    },
+    {
+      "name": "customer_id",
+      "type": "STRING",
+      "nullable": false
+    },
+    {
+      "name": "order_ts",
+      "type": "TIMESTAMP",
+      "nullable": false
+    },
+    {
+      "name": "status",
+      "type": "STRING",
+      "nullable": false,
+      "accepted_values": [
+        "PLACED",
+        "SHIPPED",
+        "DELIVERED",
+        "RETURNED"
+      ]
+    },
+    {
+      "name": "amount_usd",
+      "type": "NUMERIC",
+      "nullable": false,
+      "min": 0.0,
+      "max": 100000.0
+    }
+  ],
+  "sla_minutes": 60
+}
